@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/newlogo.png" type="image/x-icon">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/mainstyle.css">
+</head>
+<body>
+<!-- header section -->
+<section id="header" class="header">
+    <div class="outerheader">
+        <a href="#home" class="logo"><img src="images/newlogo.png" alt="" class="logoimg"></a>
+        <a href="#availability" class="btn checkBtn">book now</a>
+        <div id="menu-btn" class="fa-sharp fa-solid fa-bars"></div>
+    </div>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#things">To Do</a>
+        <a href="#about">about</a>
+        <a href="#availability">reservation</a>
+        <a href="#gallery">gallery</a>
+        <a href="#contact">contact</a>
+    </nav>
+</section>
+<!-- eof header -->
+
+<!-- home section -->
+<section id="home" class="home">
+    <div class="swiper outerhome">
+        <div class="swiper-wrapper">
+            <div class="innerhome swiper-slide">
+                <img src="images/i1.jpg" alt="Hotel Image">
+                <p>Luxury Rooms</p>
+            </div>
+            <div class="innerhome swiper-slide">
+                <img src="images/i2.jpg" alt="Hotel Image">
+                <p>Calm Environment</p>
+            </div>
+            <div class="innerhome swiper-slide">
+                <img src="images/i3.jpg" alt="Hotel Image">
+                <p>Pool Area</p>
+            </div>
+        </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<!-- eof home -->
+
+<!-- availability section -->
+<section id="availability" class="availability">
+    <form action="" method="post" id="bookingForm">
+        <div id="outeravailability">
+            <div class="inneravailability">
+                <p>Check In</p>
+                <input type="date" name="checkin" class="checkin" required>
+            </div>
+            <div class="inneravailability">
+                <p>Check Out</p>
+                <input type="date" name="checkout" class="checkout" required>
+            </div>
+            <div class="inneravailability">
+                <p>No. of Adults</p>
+                <select name="adults" id="adult">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adults</option>
+                    <option value="3">3 adults</option>
+                    <option value="4">4 adults</option>
+                    <option value="5">5 adults</option>
+                    <option value="6">6 adults</option>
+                    <option value="7">7 adults</option>
+                </select>
+            </div>
+            <div class="inneravailability">
+                <p>No. of Children</p>
+                <select name="children" id="children">
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                    <option value="4">4 children</option>
+                    <option value="5">5 children</option>
+                    <option value="6">6 children</option>
+                    <option value="7">7 children</option>
+                </select>
+            </div>
+            <div class="inneravailability">
+                <p>No. of Rooms</p>
+                <select name="rooms" id="rooms">
+                    <option value="1">1 room</option>
+                    <option value="2">2 rooms</option>
+                    <option value="3">3 rooms</option>
+                    <option value="4">4 rooms</option>
+                    <option value="5">5 rooms</option>
+                </select>
+            </div>
+            <div class="inneravailability availablesubmit">
+                <!-- <br> -->
+                <input type="submit" value="Book Now" class="availablesubmitbtn" onclick="submitBooking()">
+            </div>
+        </div>
+    </form>    
+</section>
+<!-- eof availability -->
+
+<!-- things to do section-->
+<section id="things" class="things">
+    <!-- <img src="images/bg1.jpg" alt=""> -->
+    <h3>Things to do</h3>
+    <div id="outerthings">
+       <!-- Rendering todoListFunc() -->
+    </div>
+</section>
+<!-- eof things to do -->
+
+<!-- about section -->
+<section id="about">
+    <div id="outerabout">
+        <div class="innerabout abouttext">
+            <h3>Welcome to Delight Hotels & Resorts!</h3><br><br>
+            <p>Extent your Happiness by staying with us. We are a home away from home.</p>
+                 <p>We care for each guest like a family.</p>
+                 <p> Experience the uniquness of 
+                    Sri Lankan Foods, Arts, Culture and beautiful environment.</p>
+            <p>Let's make your stay memorable!</p><br>
+            <p> <b>Call Us Now &nbsp;&nbsp;(+94)771111311 </b></p>
+        </div>
+        <div class="innerabout">
+            <img src="images/about.jpg" alt="">
+        </div>
+    </div>
+</section>
+<!-- eof about -->
+
+<!-- gallery section -->
+<section id="gallery">
+    <h3>Stay. Float. Refresh</h3>
+    <div id="outergallery">
+        <!-- ======Rendering displayImagesFunc()====== -->
+    </div>
+</section>
+<!-- eof gallery -->
+
+
+<!-- contact section -->
+<section id="contact">
+    <h3>Get In Touch with Us</h3>
+    <div><p class="displayErrorMsg"></p></div>
+        <form action="" method="post" class="outercontact" id="inquiryForm">
+            <div class="innercontact">
+                <label for="uname">Your Name</label>
+                <input type="text" id="uname" name="uname" class="un">
+            </div>
+            <div class="innercontact">
+                <label for="uemail">Email Address</label>
+                <input type="email" id="uemail" name="uemail" class="ue">
+            </div>
+            <div class="innercontact">
+                <label for="mobile">Contact Number</label>
+                <input type="tel" id="mobile" name="mobile" class="ut">
+            </div>
+            <div class="innercontact">
+                <label for="msg">Messgae</label>
+                <textarea name="msg" id="msg" cols="30" rows="5" class="um"></textarea>
+            </div>
+            <div class="innercontact">
+                <input type="button" value="Submit" name="submit" class="subbtn" onclick="submitForm()">
+            </div>
+        </form>
+
+    <div class="contactdetails">
+        <p> <b> <span>Call Us Now</span>&nbsp;&nbsp; (+94)771111311 </b></p>
+        <p> <b> <span>We Are At</span>&nbsp;&nbsp; No 12/A, Main Street, Padukka, Sri Lanka  </b></p>
+    </div>
+</section>
+<!-- eof contact -->
+
+<!-- footer section -->
+<section id="footer">
+    <div id="outerfooter">
+        <div class="innerfooter">
+            <p>All Rights Reserved &copy; 2022</p>
+            <p>Developed by Delight Hotels & Resorts</p>
+        </div>
+    </div>
+</section>
+<!-- eof footer -->
+
+
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="js/arts.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/mainscript.js"></script>
+</body>
+</html>
